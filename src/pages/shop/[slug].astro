@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { whatsappLink } from "../../consts";
+
+export async function getStaticPaths() {
+  const products = await getCollection("products");
+  return products.map((product) => ({
+    params: { slug: product.id },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const { title, price, tier, status, leadTime, materials, images, heroImage, sizeGuide, careInstructions, paymentLinkUrl, whatsappMessage } =
+  product.data;
+const { Content } = await render(product);
+
+const gallery = images.length > 0 ? images : [heroImage];
+const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}" (₹${price}).`);
+---
+
+<Layout title={product.data.seoTitle ?? title} description={product.data.seoDescription}>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-14 grid sm:grid-cols-2 gap-8 sm:gap-12">
+    <div>
+      <div class="grid grid-cols-1 gap-3">
+        {gallery.map((src) => (
+          <img src={src} alt={title} class="w-full rounded-2xl border border-line object-cover" />
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <span
+        class:list={[
+          "inline-block text-xs px-2.5 py-1 rounded-full font-medium mb-3",
+          tier === "signature" ? "bg-terracotta text-white" : "bg-sage text-white",
+        ]}
+      >
+        {tier === "signature" ? "Signature" : "Quick-Ship"}
+      </span>
+      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-2">{title}</h1>
+      <p class="text-2xl text-terracotta font-medium mb-1">₹{price.toLocaleString("en-IN")}</p>
+      {leadTime && <p class="text-ink-soft text-sm mb-6">{leadTime}</p>}
+
+      {status === "available" ? (
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+          {paymentLinkUrl ? (
+            <a
+              href={paymentLinkUrl}
+              class="flex-1 text-center rounded-full bg-terracotta text-white px-6 py-3 text-sm font-medium hover:bg-terracotta-dark transition-colors"
+            >
+              Buy Now
+            </a>
+          ) : (
+            <span class="flex-1 text-center rounded-full bg-ink/10 text-ink-soft px-6 py-3 text-sm font-medium">
+              Payment link coming soon
+            </span>
+          )}
+          <a
+            href={waLink}
+            class="flex-1 text-center rounded-full border border-sage text-sage-dark px-6 py-3 text-sm font-medium hover:bg-sage hover:text-white transition-colors"
+          >
+            Order on WhatsApp
+          </a>
+        </div>
+      ) : (
+        <p class="mb-8 rounded-full bg-ink/10 text-ink-soft px-6 py-3 text-sm font-medium inline-block">
+          This piece has been sold
+        </p>
+      )}
+
+      <div class="prose-sm text-ink-soft mb-6 [&>p]:mb-3">
+        <Content />
+      </div>
+
+      {materials && (
+        <p class="text-sm text-ink-soft mb-2"><span class="font-medium text-ink">Materials:</span> {materials}</p>
+      )}
+      {sizeGuide && (
+        <p class="text-sm text-ink-soft mb-2"><span class="font-medium text-ink">Size guide:</span> {sizeGuide}</p>
+      )}
+      <p class="text-sm text-ink-soft"><span class="font-medium text-ink">Care:</span> {careInstructions}</p>
+    </div>
+  </div>
+</Layout>

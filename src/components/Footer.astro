@@ -1,0 +1,44 @@
+---
+import { SITE, CONTACT, whatsappLink } from "../consts";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-line bg-cream-dark mt-16">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-3 text-sm text-ink-soft">
+    <div>
+      <p class="font-display text-lg text-ink mb-2">{SITE.name}</p>
+      <p>{SITE.tagline}</p>
+    </div>
+
+    <div>
+      <p class="font-medium text-ink mb-2">Get 10% off your first order</p>
+      <p class="mb-3">Message us on WhatsApp and we'll send you a code.</p>
+      <a
+        href={whatsappLink("Hi! I'd like 10% off my first order 🧶")}
+        class="inline-block rounded-full bg-sage text-white px-4 py-2 text-sm hover:bg-sage-dark transition-colors"
+      >
+        Message on WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <p class="font-medium text-ink mb-2">Seller details</p>
+      <p>{CONTACT.legalName}</p>
+      <p>{CONTACT.address}</p>
+      <p>
+        <a href={`mailto:${CONTACT.email}`} class="hover:text-terracotta">{CONTACT.email}</a>
+      </p>
+      <p class="mt-2">
+        <a href="/faq#returns" class="underline hover:text-terracotta">Shipping &amp; returns policy</a>
+      </p>
+      <p>
+        <a href="/faq#grievance" class="underline hover:text-terracotta">Grievance contact</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-line px-4 sm:px-6 py-4 text-center text-xs text-ink-soft">
+    &copy; {currentYear} {SITE.name}. Handmade in India.
+  </div>
+</footer>

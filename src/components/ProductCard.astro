@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  product: CollectionEntry<"products">;
+}
+
+const { product } = Astro.props;
+const { title, price, heroImage, tier, status, leadTime } = product.data;
+---
+
+<a
+  href={`/shop/${product.id}`}
+  class="group block rounded-2xl overflow-hidden bg-white border border-line hover:shadow-lg transition-shadow"
+>
+  <div class="aspect-[4/5] overflow-hidden bg-cream-dark relative">
+    <img
+      src={heroImage}
+      alt={title}
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      loading="lazy"
+    />
+    <span
+      class:list={[
+        "absolute top-3 left-3 text-xs px-2.5 py-1 rounded-full font-medium",
+        tier === "signature" ? "bg-terracotta text-white" : "bg-sage text-white",
+      ]}
+    >
+      {tier === "signature" ? "Signature" : "Quick-Ship"}
+    </span>
+    {status === "sold" && (
+      <span class="absolute inset-0 bg-ink/60 flex items-center justify-center text-white font-display text-lg">
+        Sold
+      </span>
+    )}
+  </div>
+  <div class="p-4">
+    <h3 class="font-display text-lg text-ink">{title}</h3>
+    <p class="text-ink-soft text-sm mt-1">{leadTime}</p>
+    <p class="text-terracotta font-medium mt-2">₹{price.toLocaleString("en-IN")}</p>
+  </div>
+</a>

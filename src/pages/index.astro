@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "../consts";
+
+const allProducts = (await getCollection("products")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()
+);
+const featured = allProducts.filter((p) => p.data.status === "available").slice(0, 6);
+---
+
+<Layout>
+  <section class="mx-auto max-w-5xl px-4 sm:px-6 pt-14 sm:pt-20 pb-16 text-center">
+    <p class="uppercase tracking-[0.2em] text-xs text-sage-dark font-medium mb-4">
+      Handmade in India
+    </p>
+    <h1 class="font-display text-4xl sm:text-6xl text-ink leading-tight">
+      {SITE.tagline}
+    </h1>
+    <p class="mt-5 text-ink-soft text-lg max-w-xl mx-auto">
+      Every piece is crocheted by hand, one at a time — no factories, no mass
+      production. When it's ready, it's listed. When it's gone, it's gone.
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <a
+        href="/shop"
+        class="rounded-full bg-terracotta text-white px-6 py-3 text-sm font-medium hover:bg-terracotta-dark transition-colors"
+      >
+        Shop the collection
+      </a>
+      <a
+        href="/about"
+        class="rounded-full border border-ink/20 text-ink px-6 py-3 text-sm font-medium hover:border-terracotta hover:text-terracotta transition-colors"
+      >
+        Our story
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 sm:px-6 pb-20">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="font-display text-2xl sm:text-3xl text-ink">Currently available</h2>
+      <a href="/shop" class="text-sm text-terracotta hover:underline">View all</a>
+    </div>
+    {featured.length > 0 ? (
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+        {featured.map((product) => <ProductCard product={product} />)}
+      </div>
+    ) : (
+      <p class="text-ink-soft">
+        Nothing's live yet — the first pieces are on their way. Check back soon.
+      </p>
+    )}
+  </section>
+
+  <section class="bg-cream-dark border-y border-line">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 py-16 grid sm:grid-cols-2 gap-8 items-center">
+      <div class="aspect-square rounded-2xl bg-white border border-line flex items-center justify-center text-ink-soft text-sm">
+        Maker photo/video goes here
+      </div>
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl text-ink mb-4">
+          Made by one pair of hands
+        </h2>
+        <p class="text-ink-soft mb-4">
+          Stitch &amp; Twirl is one person's craft, not a factory line. Every
+          blanket, bag, and small piece takes days of quiet, careful work —
+          which is exactly why no two are quite the same.
+        </p>
+        <a href="/about" class="text-terracotta font-medium hover:underline">
+          Read the full story →
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

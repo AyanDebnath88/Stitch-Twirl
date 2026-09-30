@@ -1,0 +1,35 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# pipeline working folders — raw photo drops and draft social packets,
+# not site code, shouldn't be committed
+/new-products/*
+!/new-products/.gitkeep
+!/new-products/_published/
+/new-products/_published/*
+!/new-products/_published/.gitkeep
+/ready-to-post/*
+!/ready-to-post/.gitkeep
+

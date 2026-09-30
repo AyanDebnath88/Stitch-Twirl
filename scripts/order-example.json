@@ -1,0 +1,19 @@
+{
+  "order_id": "ST-0001",
+  "order_date": "2026-01-15 10:00",
+  "sku": "SIG-2026-001",
+  "product_title": "Rust Cable-Knit Crochet Cardigan",
+  "price": 4200,
+  "payment_method": "Prepaid",
+  "buyer_name": "Example Buyer",
+  "buyer_address": "123 Example Street, Example Colony",
+  "buyer_city": "Mumbai",
+  "buyer_state": "Maharashtra",
+  "buyer_pincode": "400001",
+  "buyer_phone": "9999999999",
+  "buyer_email": "buyer@example.com",
+  "weight_kg": 0.5,
+  "length_cm": 25,
+  "breadth_cm": 20,
+  "height_cm": 8
+}
