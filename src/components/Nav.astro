@@ -1,0 +1,25 @@
+---
+import Logomark from "./Logomark.astro";
+import { SITE } from "../consts";
+
+interface Props {
+  activePage?: "home" | "shop";
+}
+const { activePage } = Astro.props;
+---
+
+<nav
+  class="h-24 flex items-center justify-between border-b border-line px-5 sm:px-20"
+>
+  <a href="/" class="flex items-center gap-3 text-ink">
+    <Logomark size={34} />
+    <span class="wordmark text-[22px]">{SITE.name}</span>
+  </a>
+  <div class="hidden sm:flex items-center gap-8">
+    <a href="/shop" class:list={["navlink", activePage === "shop" && "text-clay"]}>Shop</a>
+    <a href="/about" class="navlink">Our Story</a>
+    <a href="/faq#care" class="navlink">Care Guide</a>
+    <a href="/faq#grievance" class="navlink">Contact</a>
+  </div>
+  <a href="/shop" class="sm:hidden navlink">Shop</a>
+</nav>

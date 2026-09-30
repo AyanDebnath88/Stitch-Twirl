@@ -1,0 +1,31 @@
+---
+import { SHIP_TIME } from "../consts";
+
+const items = [
+  {
+    label: "Hand-dyed, hand-wound yarn",
+    icon: `<path d="M12 4a8 8 0 1 0 0 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>`,
+  },
+  {
+    label: "Made to order, one at a time",
+    icon: `<path d="M9 3v10a4 4 0 0 0 6 3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`,
+  },
+  {
+    label: `Ships across India in ${SHIP_TIME}`,
+    icon: `<rect x="3" y="8" width="18" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 8l9-5 9 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`,
+  },
+];
+---
+
+<section class="bg-stone border-y border-line">
+  <div
+    class="max-w-[1280px] mx-auto px-5 sm:px-20 py-10 sm:py-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16"
+  >
+    {items.map((item) => (
+      <div class="flex items-center gap-3 text-ink-70 text-sm">
+        <svg width="22" height="22" viewBox="0 0 24 24" set:html={item.icon} />
+        <span>{item.label}</span>
+      </div>
+    ))}
+  </div>
+</section>

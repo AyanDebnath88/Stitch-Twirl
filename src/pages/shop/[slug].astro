@@ -20,62 +20,52 @@ const gallery = images.length > 0 ? images : [heroImage];
 const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}" (₹${price}).`);
 ---
 
-<Layout title={product.data.seoTitle ?? title} description={product.data.seoDescription}>
-  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-14 grid sm:grid-cols-2 gap-8 sm:gap-12">
-    <div>
-      <div class="grid grid-cols-1 gap-3">
-        {gallery.map((src) => (
-          <img src={src} alt={title} class="w-full rounded-3xl object-cover" />
-        ))}
-      </div>
+<Layout title={product.data.seoTitle ?? title} description={product.data.seoDescription} activePage="shop">
+  <div class="max-w-[1280px] mx-auto px-5 sm:px-20 py-12 sm:py-20 grid sm:grid-cols-2 gap-8 sm:gap-16">
+    <div class="grid grid-cols-1 gap-3">
+      {gallery.map((src) => (
+        <img src={src} alt={title} class="w-full aspect-[4/5] object-cover rounded-[2px]" />
+      ))}
     </div>
 
     <div>
-      <p class="font-mono text-xs tracking-[0.08em] text-terracotta-dark mb-3">
+      <p class="eyebrow text-clay mb-4">
         {sku} &mdash; {tier === "signature" ? "Signature" : "Quick-Ship"} &middot; one of one
       </p>
-      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-2">{title}</h1>
-      <p class="text-2xl text-ink font-medium mb-1">₹{price.toLocaleString("en-IN")}</p>
-      {leadTime && <p class="text-ink-soft text-sm mb-6">{leadTime}</p>}
+      <h1 class="h-serif text-3xl sm:text-4xl text-ink mb-3">{title}</h1>
+      <p class="text-2xl text-ink mb-1">₹{price.toLocaleString("en-IN")}</p>
+      {leadTime && <p class="text-ink-70 text-sm mb-8">{leadTime}</p>}
 
       {status === "available" ? (
-        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+        <div class="flex flex-col sm:flex-row gap-3 mb-10">
           {paymentLinkUrl ? (
-            <a
-              href={paymentLinkUrl}
-              class="flex-1 text-center rounded-full bg-ink text-cream px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
-            >
+            <a href={paymentLinkUrl} class="btn flex-1 justify-center text-ink hover:bg-ink hover:text-oat transition-colors">
               Buy Now
             </a>
           ) : (
-            <span class="flex-1 text-center rounded-full bg-ink/10 text-ink-soft px-6 py-3 text-sm font-medium">
+            <span class="btn flex-1 justify-center text-ink-45 border-line">
               Payment link coming soon
             </span>
           )}
-          <a
-            href={waLink}
-            class="flex-1 text-center rounded-full border border-sage-dark text-sage-dark px-6 py-3 text-sm font-medium hover:bg-ink hover:text-cream hover:border-ink transition-colors"
-          >
+          <a href={waLink} class="btn flex-1 justify-center text-clay hover:bg-clay hover:text-oat transition-colors">
             Order on WhatsApp
           </a>
         </div>
       ) : (
-        <p class="mb-8 rounded-full bg-ink/10 text-ink-soft px-6 py-3 text-sm font-medium inline-block">
-          This piece has been sold
-        </p>
+        <p class="btn inline-flex mb-10 text-ink-45 border-line">This piece has been sold</p>
       )}
 
-      <div class="prose-sm text-ink-soft mb-6 [&>p]:mb-3">
+      <div class="text-ink-70 text-sm mb-8 [&>p]:mb-3">
         <Content />
       </div>
 
       {materials && (
-        <p class="text-sm text-ink-soft mb-2"><span class="font-medium text-ink">Materials:</span> {materials}</p>
+        <p class="text-sm text-ink-70 mb-2"><span class="text-ink">Materials:</span> {materials}</p>
       )}
       {sizeGuide && (
-        <p class="text-sm text-ink-soft mb-2"><span class="font-medium text-ink">Size guide:</span> {sizeGuide}</p>
+        <p class="text-sm text-ink-70 mb-2"><span class="text-ink">Size guide:</span> {sizeGuide}</p>
       )}
-      <p class="text-sm text-ink-soft"><span class="font-medium text-ink">Care:</span> {careInstructions}</p>
+      <p class="text-sm text-ink-70"><span class="text-ink">Care:</span> {careInstructions}</p>
     </div>
   </div>
 </Layout>

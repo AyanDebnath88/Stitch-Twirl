@@ -1,44 +1,125 @@
 @import "tailwindcss";
 
+/* Stitch & Twirl — design tokens, from design-handoff (2026).
+   Paired with the Google Fonts link in Layout.astro <head>. */
+
+:root {
+  --oat: #f2ede6; /* page ground */
+  --oat2: #eae1d2; /* secondary card bg */
+  --stone: #d8d3cb; /* neutral break sections */
+  --ink: #2a2420; /* text / dark sections */
+  --ink-70: rgba(42, 36, 32, 0.72);
+  --ink-45: rgba(42, 36, 32, 0.45);
+  --clay: #8b4a2b; /* accent on light bg */
+  --clay-soft: #c98a5e; /* accent on dark bg */
+  --line: #ddd2c2; /* hairline borders */
+}
+
 @theme {
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-body: "Nunito", system-ui, sans-serif;
+  --color-oat: #f2ede6;
+  --color-oat-2: #eae1d2;
+  --color-stone: #d8d3cb;
+  --color-ink: #2a2420;
+  --color-ink-70: rgba(42, 36, 32, 0.72);
+  --color-ink-45: rgba(42, 36, 32, 0.45);
+  --color-clay: #8b4a2b;
+  --color-clay-soft: #c98a5e;
+  --color-line: #ddd2c2;
+  --font-serif: "Marcellus", serif;
+  --font-wordmark: "Instrument Serif", serif;
+  --font-body: "Poppins", sans-serif;
   --font-mono: "IBM Plex Mono", "Courier New", monospace;
-
-  /* soft cottagecore palette, disciplined to one dominant accent (rose) +
-     one sparingly-used secondary (butter) — gallery restraint, not a
-     rainbow of craft-fair colors */
-  --color-cream: #fbf4ee;
-  --color-cream-dark: #f3e6dd;
-  --color-ink: #2e2724;
-  --color-ink-soft: #6b5f58;
-  --color-terracotta: #c98a82;
-  --color-terracotta-dark: #b06f67;
-  --color-sage: #92a587;
-  --color-sage-dark: #778c6c;
-  --color-gold: #e3c27e;
-  --color-line: #ead9ce;
 }
 
-body {
-  background-color: var(--color-cream);
-  color: var(--color-ink);
-  font-family: var(--font-body);
+/* Base element resets, layered so Tailwind utility classes (e.g.
+   text-clay-soft) can still override them — unlayered CSS always beats
+   @layer CSS in the cascade regardless of source order. */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--oat);
+    color: var(--ink);
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: var(--clay);
+    color: var(--oat);
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-.font-display {
-  font-family: var(--font-display);
-}
+@layer components {
+  .eyebrow {
+    font-family: "Marcellus", serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+  }
 
-.font-mono {
-  font-family: var(--font-mono);
-}
+  .wordmark {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+  }
 
-::selection {
-  background-color: var(--color-terracotta);
-  color: white;
+  .h-serif {
+    font-family: "Marcellus", serif;
+  }
+
+  .navlink {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    background: none;
+    cursor: pointer;
+  }
+
+  /* Photo placeholder shot-list caption — remove once the real photo is in */
+  .shot-caption {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-45);
+    margin: 12px 0 14px;
+  }
+
+  .ghost-mark {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
 }

@@ -4,37 +4,38 @@ import { CONTACT } from "../consts";
 ---
 
 <Layout title="FAQ & Policies">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 py-12 sm:py-16">
-    <h1 class="font-display text-3xl sm:text-4xl text-ink mb-8">FAQ &amp; Policies</h1>
+  <div class="max-w-2xl mx-auto px-5 sm:px-6 py-16 sm:py-24">
+    <p class="eyebrow text-clay mb-4">FAQ</p>
+    <h1 class="h-serif text-4xl sm:text-5xl text-ink mb-10">Policies &amp; Care</h1>
 
-    <div class="space-y-10 text-ink-soft">
+    <div class="space-y-10 text-ink-70">
       <section>
-        <h2 class="font-display text-xl text-ink mb-3">Shipping</h2>
+        <h2 class="h-serif text-xl text-ink mb-3">Shipping</h2>
         <p class="mb-2">We ship across India only. Every order is handmade to order or made in small batches, so please check the lead time on each product page before ordering — most pieces ship within the window stated there.</p>
         <p>Shipping cost is calculated at checkout based on weight and destination and is shown as a separate line from the item price before you pay.</p>
       </section>
 
       <section id="returns">
-        <h2 class="font-display text-xl text-ink mb-3">Payment, Cancellations &amp; Returns</h2>
-        <p class="mb-2"><span class="font-medium text-ink">Payment:</span> we accept prepaid payment via UPI/cards/net banking through our secure payment link. Cash on delivery (COD) may be available on request — ask us on WhatsApp before ordering.</p>
-        <p class="mb-2"><span class="font-medium text-ink">Cancellations:</span> since most pieces are made by hand for your order, cancellations are only possible before the item is made or shipped. Message us as soon as possible if you need to cancel.</p>
-        <p class="mb-2"><span class="font-medium text-ink">Returns &amp; refunds:</span> because every piece is handmade and one-of-a-kind, we don't accept returns for change of mind. If your order arrives damaged or significantly different from what was shown, message us within 48 hours of delivery with photos and we'll offer a replacement or refund at our discretion.</p>
+        <h2 class="h-serif text-xl text-ink mb-3">Payment, Cancellations &amp; Returns</h2>
+        <p class="mb-2"><span class="text-ink">Payment:</span> we accept prepaid payment via UPI/cards/net banking through our secure payment link. Cash on delivery (COD) may be available on request — ask us on WhatsApp before ordering.</p>
+        <p class="mb-2"><span class="text-ink">Cancellations:</span> since most pieces are made by hand for your order, cancellations are only possible before the item is made or shipped. Message us as soon as possible if you need to cancel.</p>
+        <p class="mb-2"><span class="text-ink">Returns &amp; refunds:</span> because every piece is handmade and one-of-a-kind, we don't accept returns for change of mind. If your order arrives damaged or significantly different from what was shown, message us within 48 hours of delivery with photos and we'll offer a replacement or refund at our discretion.</p>
         <p>Refunds, when approved, are made to the original payment method within 7-10 business days.</p>
       </section>
 
-      <section>
-        <h2 class="font-display text-xl text-ink mb-3">Care Instructions</h2>
+      <section id="care">
+        <h2 class="h-serif text-xl text-ink mb-3">Care Instructions</h2>
         <p>Hand wash cold, lay flat to dry, do not wring or bleach — unless the individual product page says otherwise.</p>
       </section>
 
       <section id="grievance">
-        <h2 class="font-display text-xl text-ink mb-3">Seller &amp; Grievance Details</h2>
+        <h2 class="h-serif text-xl text-ink mb-3">Seller &amp; Grievance Details</h2>
         <p>As required under the Consumer Protection (E-Commerce) Rules, 2020:</p>
         <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li><span class="font-medium text-ink">Legal name:</span> {CONTACT.legalName}</li>
-          <li><span class="font-medium text-ink">Address:</span> {CONTACT.address}</li>
-          <li><span class="font-medium text-ink">Email:</span> <a href={`mailto:${CONTACT.email}`} class="underline hover:text-terracotta">{CONTACT.email}</a></li>
-          <li><span class="font-medium text-ink">Grievance contact:</span> {CONTACT.grievanceContact}</li>
+          <li><span class="text-ink">Legal name:</span> {CONTACT.legalName}</li>
+          <li><span class="text-ink">Address:</span> {CONTACT.address}</li>
+          <li><span class="text-ink">Email:</span> <a href={`mailto:${CONTACT.email}`} class="underline hover:text-clay">{CONTACT.email}</a></li>
+          <li><span class="text-ink">Grievance contact:</span> {CONTACT.grievanceContact}</li>
         </ul>
       </section>
     </div>

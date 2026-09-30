@@ -1,0 +1,54 @@
+---
+import GhostMark from "./GhostMark.astro";
+
+interface Props {
+  /** Real product photo — once set, replaces the placeholder gradient. */
+  image?: string;
+}
+const { image } = Astro.props;
+---
+
+<section
+  class="relative h-[560px] sm:h-[820px] overflow-hidden flex items-end"
+  style={
+    image
+      ? { backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }
+      : { background: "linear-gradient(155deg, #E7D9C6 0%, #CFAE8B 45%, #B78E68 100%)" }
+  }
+>
+  {!image && (
+    <svg class="absolute inset-0 w-full h-full opacity-15" aria-hidden="true">
+      <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain)"></rect>
+    </svg>
+  )}
+
+  <div
+    class="absolute inset-0"
+    style={{ background: "linear-gradient(0deg, rgba(20,16,13,.58) 0%, transparent 48%)" }}
+  >
+  </div>
+
+  <div class="relative z-10 px-5 sm:px-20 pb-10 sm:pb-16 max-w-2xl">
+    {!image && <p class="shot-caption text-oat/70">folded signature throw, warm studio seamless</p>}
+    <p class="eyebrow text-oat/85 mb-4">Made by one pair of hands</p>
+    <h1 class="wordmark text-oat text-[44px] sm:text-[64px] leading-[1.05] mb-5">
+      Made to be lived with.
+    </h1>
+    <p class="text-oat/85 text-sm sm:text-base max-w-md mb-8">
+      Every piece here is hand-crocheted, one at a time, in small batches —
+      no factories, no rush. When it's ready, it's listed.
+    </p>
+    <a href="/shop" class="btn text-oat border-oat hover:bg-oat hover:text-ink transition-colors">
+      Shop the Collection
+    </a>
+  </div>
+
+  <GhostMark
+    size="clamp(160px, 34vw, 420px)"
+    color="rgba(255,255,255,.22)"
+    class="z-20 right-4 sm:right-16 bottom-4 sm:bottom-10 mix-blend-overlay"
+  />
+</section>

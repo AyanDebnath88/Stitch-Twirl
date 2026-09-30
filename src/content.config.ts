@@ -15,6 +15,7 @@ const products = defineCollection({
     heroImage: z.string(),
     images: z.array(z.string()).default([]),
     description: z.string(),
+    cardBlurb: z.string().optional(),
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     sizeGuide: z.string().optional(),

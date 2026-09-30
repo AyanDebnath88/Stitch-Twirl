@@ -11,6 +11,8 @@ export const SITE = {
   domain: "https://PLACEHOLDER-DOMAIN.in",
 };
 
+export const SHIP_TIME = "3-5 days";
+
 export const CONTACT = {
   legalName: "PLACEHOLDER LEGAL NAME (e.g. Jane Doe, proprietor)",
   address: "PLACEHOLDER ADDRESS, City, State, PIN",

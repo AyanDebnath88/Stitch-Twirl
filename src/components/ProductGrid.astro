@@ -1,0 +1,88 @@
+---
+import type { CollectionEntry } from "astro:content";
+import GhostMark from "./GhostMark.astro";
+
+interface Props {
+  eyebrow: string;
+  heading: string;
+  subcopy?: string;
+  products: CollectionEntry<"products">[];
+  emptyText: string;
+  columns?: 2 | 3;
+  cardSize?: "md" | "lg";
+  bg?: "oat" | "stone";
+  ghost?: boolean;
+  id?: string;
+}
+
+const {
+  eyebrow,
+  heading,
+  subcopy,
+  products,
+  emptyText,
+  columns = 3,
+  cardSize = "md",
+  bg = "oat",
+  ghost = false,
+  id,
+} = Astro.props;
+
+const gridCols = columns === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3";
+const gap = cardSize === "lg" ? "gap-10" : "gap-8";
+---
+
+<section id={id} class:list={["relative overflow-hidden", bg === "stone" ? "bg-stone" : "bg-oat"]}>
+  {ghost && (
+    <GhostMark
+      size="clamp(140px, 26vw, 340px)"
+      color="rgba(42,36,32,.045)"
+      class="left-1/2 -translate-x-1/2 top-0"
+    />
+  )}
+
+  <div class="relative max-w-[1280px] mx-auto px-5 sm:px-20 py-16 sm:py-24">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-10 sm:mb-14">
+      <div>
+        <p class="eyebrow text-clay mb-3">{eyebrow}</p>
+        <h2 class="h-serif text-3xl sm:text-4xl">{heading}</h2>
+      </div>
+      {subcopy && <p class="text-ink-70 text-sm max-w-sm sm:text-right">{subcopy}</p>}
+    </div>
+
+    {products.length > 0 ? (
+      <div class:list={["grid grid-cols-2", gridCols, gap]}>
+        {products.map((product) => {
+          const { title, price, tier, status, leadTime, cardBlurb, heroImage } = product.data;
+          return (
+            <a href={`/shop/${product.id}`} class="group block">
+              <div class="aspect-[4/5] overflow-hidden rounded-[2px] bg-oat-2 relative">
+                <img
+                  src={heroImage}
+                  alt={title}
+                  class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                  loading="lazy"
+                />
+                {status === "sold" && (
+                  <span class="absolute inset-0 bg-ink/50 flex items-center justify-center text-oat wordmark text-lg">
+                    Sold
+                  </span>
+                )}
+              </div>
+              <h3 class="h-serif text-lg text-ink mt-4">{title}</h3>
+              {cardBlurb && <p class="text-ink-70 text-sm mt-1">{cardBlurb}</p>}
+              <div class="flex items-center justify-between mt-2">
+                <span class="text-ink font-medium text-sm">₹{price.toLocaleString("en-IN")}</span>
+                <span class="text-clay text-[11px] uppercase tracking-[0.06em]">
+                  {tier === "signature" ? `Made to order${leadTime ? ` · ${leadTime.replace(/^ships in /i, "")}` : ""}` : leadTime ?? "Quick-ship"}
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    ) : (
+      <p class="text-ink-70 text-sm">{emptyText}</p>
+    )}
+  </div>
+</section>

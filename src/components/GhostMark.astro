@@ -1,0 +1,18 @@
+---
+// Oversized "S&T" wordmark used as a soft background texture (usul.kr-derived).
+interface Props {
+  size: number | string;
+  color: string;
+  class?: string;
+}
+const { size, color, class: className = "" } = Astro.props;
+const fontSize = typeof size === "number" ? `${size}px` : size;
+---
+
+<div
+  class:list={["ghost-mark", className]}
+  style={{ fontSize, color }}
+  aria-hidden="true"
+>
+  S&amp;T
+</div>

@@ -1,0 +1,34 @@
+---
+interface Props {
+  image?: string;
+}
+const { image } = Astro.props;
+---
+
+<section class="bg-ink text-oat">
+  <div
+    class="max-w-[1280px] mx-auto px-5 sm:px-20 py-16 sm:py-24 flex flex-col sm:flex-row items-center gap-10 sm:gap-16"
+  >
+    <div class="shrink-0 flex flex-col items-center">
+      <div
+        class="w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] rounded-full overflow-hidden bg-oat/10 flex items-center justify-center"
+        style={image ? { backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
+      >
+        {!image && <span class="text-oat/40 text-xs text-center px-6">maker's hands, working a stitch</span>}
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow text-clay-soft mb-4">Our Story</p>
+      <h2 class="h-serif text-3xl sm:text-4xl mb-5">One hook. No shortcuts.</h2>
+      <p class="text-oat/75 max-w-lg mb-6">
+        Stitch &amp; Twirl is one woman's craft, worked by hand at home — no
+        factory, no assembly line. Every blanket, bag, and small piece takes
+        days of quiet, careful work, which is exactly why no two come out
+        quite the same.
+      </p>
+      <a href="/about" class="text-clay-soft text-sm underline underline-offset-4">
+        Read the full story
+      </a>
+    </div>
+  </div>
+</section>
