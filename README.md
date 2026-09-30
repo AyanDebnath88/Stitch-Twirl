@@ -37,15 +37,15 @@ This is a local-Windows-only quirk — Cloudflare Pages builds on Linux, where
 - `public/products/<sku-slug>/` — processed product images, referenced by plain URL path in each product's frontmatter
 - `scripts/` — Node scripts for Razorpay payment links, Shiprocket orders/labels, and the Google Sheet tracker
 - `apps-script/OrderTracker.gs` — paste into the Google Sheet's Apps Script editor (see comment header in that file)
-- `new-products/` — drop raw phone photos here (git-ignored); `new-products/_published/` is where processed folders get moved
+- `new-products/` — flat drop folder (git-ignored). Drop any image files loose here, any filenames, no subfolders needed — Claude identifies each by looking at it and sorts them out, same as the first WhatsApp photo batch. `new-products/_published/` is where originals get archived after a product goes live (also flat).
 - `ready-to-post/` — drafted Instagram/WhatsApp content per product, for manual posting (git-ignored)
 
 ## The listing pipeline (new product → live on site)
 
 Run this whenever the user says "process new products" or similar:
 
-1. Read the raw photo(s) from `new-products/<some-folder>/`.
-2. From the photo content itself (not the filename), determine the product title, category, and tier (`signature` or `quick-ship`).
+1. Read every loose file in `new-products/`, open each one, and identify which product (and which angle — hero/source-faithful/detail/alt) it is by looking at it — filenames carry no information, don't rely on them.
+2. Group the identified images by product. From the photo content itself, determine the product title, category, and tier (`signature` or `quick-ship`) for any product not already in `src/content/products/`.
 3. Run `python scripts/cleanup-photos.py` (crop/orient/autocontrast — local Pillow only, no external service, no API dependency/cost) on the new photos, adding a `JOBS` entry per file.
 4. Price it: `(yarn cost + fair hourly rate × hours) × 1.4–1.6`, sanity-checked against the pricing benchmark table in the plan (Section 1).
 5. Write SEO title/description.
@@ -55,7 +55,7 @@ Run this whenever the user says "process new products" or similar:
 9. Create `src/content/products/<slug>.md` with full frontmatter (see `content.config.ts` for every field).
 10. Log the listing: `node scripts/log-to-sheet.mjs --type listing --sku <SKU> --title "<title>" --price <price> --tier <tier>`.
 11. Commit + push — Cloudflare Pages auto-deploys.
-12. Move the source folder into `new-products/_published/`.
+12. Move the source file(s) into `new-products/_published/` (flat, just for archive).
 13. Draft an Instagram caption + hashtags + WhatsApp catalog text into `ready-to-post/<slug>/`.
 
 ## The fulfillment flow (order comes in → shipped)
