@@ -1,8 +1,8 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { file } from "astro/loaders";
 
 const products = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/products" }),
+  loader: file("./src/content/products/products.yaml"),
   schema: z.object({
     title: z.string(),
     sku: z.string(),

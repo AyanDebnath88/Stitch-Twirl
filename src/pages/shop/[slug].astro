@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import { whatsappLink } from "../../consts";
 
 export async function getStaticPaths() {
@@ -12,9 +12,9 @@ export async function getStaticPaths() {
 }
 
 const { product } = Astro.props;
-const { title, sku, price, tier, status, leadTime, materials, images, heroImage, sizeGuide, careInstructions, paymentLinkUrl, whatsappMessage } =
+const { title, sku, price, tier, status, leadTime, materials, images, heroImage, sizeGuide, careInstructions, paymentLinkUrl, whatsappMessage, description } =
   product.data;
-const { Content } = await render(product);
+const descriptionParagraphs = description.trim().split(/\n\s*\n/);
 
 const gallery = images.length > 0 ? images : [heroImage];
 const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}" (₹${price}).`);
@@ -56,7 +56,7 @@ const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}"
       )}
 
       <div class="text-ink-70 text-sm mb-8 [&>p]:mb-3">
-        <Content />
+        {descriptionParagraphs.map((para) => <p>{para}</p>)}
       </div>
 
       {materials && (

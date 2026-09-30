@@ -32,7 +32,7 @@ This is a local-Windows-only quirk — Cloudflare Pages builds on Linux, where
 
 ## Project structure
 
-- `src/content/products/*.md` — one file per live product (see `content.config.ts` for the schema)
+- `src/content/products/products.yaml` — every live product, one file (see `content.config.ts` for the schema each entry must match)
 - `src/pages/` — Home, Shop, Product detail (`shop/[slug].astro`), About, FAQ (legal disclosures live here)
 - `public/products/<category>/<slug>/` — processed product images, grouped by category folder (`potli`, `bag`, `doily`, `scarf`, `shawl`, `accessory`, ...), referenced by plain URL path in each product's frontmatter
 - `scripts/` — Node scripts for Razorpay payment links, Shiprocket orders/labels, and the Google Sheet tracker
@@ -52,7 +52,7 @@ Run this whenever the user says "process new products" or similar:
 6. Generate the SKU: `SIG-YYYY-NNN` or `QS-YYYY-NNN` (sequential — check existing files in `src/content/products/` for the next number).
 7. Save processed images to `public/products/<category>/<slug>/`.
 8. Run `node scripts/create-payment-link.mjs --amount <price> --title "<title>" --sku <SKU>` once Razorpay is set up, and put the resulting URL in `paymentLinkUrl`.
-9. Create `src/content/products/<slug>.md` with full frontmatter (see `content.config.ts` for every field).
+9. Append an entry to `src/content/products/products.yaml` (`id: <slug>` + every field from `content.config.ts`).
 10. Log the listing: `node scripts/log-to-sheet.mjs --type listing --sku <SKU> --title "<title>" --price <price> --tier <tier>`.
 11. Commit + push — Cloudflare Pages auto-deploys.
 12. Move the source file(s) into `new-products/_published/` (flat, just for archive).

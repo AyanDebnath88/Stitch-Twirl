@@ -1,0 +1,243 @@
+# All products live in this one file instead of one .md per product —
+# keeps the catalog scannable as it grows. Add a new product by appending
+# an entry here; see content.config.ts for the schema each entry must match.
+
+- id: floral-granny-scarf
+  title: "Cream Granny-Square Floral Scarf"
+  sku: "SIG-2026-001"
+  tier: "signature"
+  price: 2200
+  leadTime: "Ships in 3-5 days"
+  materials: "Acrylic yarn"
+  heroImage: "/products/scarf/floral-granny-scarf/hero.jpg"
+  images:
+    - "/products/scarf/floral-granny-scarf/hero.jpg"
+    - "/products/scarf/floral-granny-scarf/2.jpg"
+  description: |
+    A cream granny-square scarf worked square by square, each one centred with
+    a hand-crocheted red flower on green leaves. Finished with a long
+    red-green-white fringe and two matching pom-poms. One piece, already made —
+    what you see is what ships.
+  cardBlurb: "Granny-square floral scarf, hand-tied fringe and pom-poms."
+  seoTitle: "Handmade Crochet Floral Scarf — Cream & Red | Stitch & Twirl"
+  seoDescription: "Hand-crocheted granny-square scarf with red crochet flowers, green leaves, and a long fringe. One of one, made in India."
+  careInstructions: "Hand wash cold, lay flat to dry, do not wring or bleach."
+  publishedAt: 2026-09-30
+
+- id: flower-appliques
+  title: "Crochet Flower Duo"
+  sku: "QS-2026-009"
+  tier: "quick-ship"
+  price: 180
+  leadTime: "Ships in 3-5 days"
+  materials: "Acrylic yarn"
+  heroImage: "/products/accessory/flower-appliques/hero.jpg"
+  images:
+    - "/products/accessory/flower-appliques/hero.jpg"
+    - "/products/accessory/flower-appliques/2.jpg"
+  description: |
+    Small hand-crocheted flowers — a red bloom with a cream centre and a cream
+    bloom with a red centre, plus an ivory rose with leaves. Use as brooches,
+    hair clips, or appliques. Details TBC — check with us on WhatsApp for
+    exact finishing.
+  cardBlurb: "Small crochet flowers, red/cream and ivory rose."
+  seoTitle: "Handmade Crochet Flower Appliques | Stitch & Twirl"
+  seoDescription: "Small hand-crocheted flower appliques in red, cream, and ivory. Made in India."
+  careInstructions: "Hand wash cold, lay flat to dry, do not wring or bleach."
+  publishedAt: 2026-09-30
+
+- id: gold-bead-potli
+  title: "Gold Thread Potli, All-Gold Beaded"
+  sku: "QS-2026-008"
+  tier: "quick-ship"
+  price: 1650
+  leadTime: "Ships in 3-5 days"
+  materials: "Metallic gold crochet thread, satin lining, gold beads"
+  heroImage: "/products/potli/gold-bead-potli/hero.jpg"
+  images:
+    - "/products/potli/gold-bead-potli/hero.jpg"
+    - "/products/potli/gold-bead-potli/2.jpg"
+  description: |
+    A gold-thread potli bag crocheted over a satin lining, trimmed in a ring of
+    gold beads at the base and gold-beaded drawstring tassels. Festive and
+    bridal-ready, made to be seen.
+  cardBlurb: "Gold-thread potli over satin, all-gold bead trim."
+  seoTitle: "Handmade Crochet Gold Potli Bag, Gold Beads | Stitch & Twirl"
+  seoDescription: "Hand-crocheted gold-thread potli bag over satin lining with a gold bead trim. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: gold-pearl-potli
+  title: "Gold Thread Potli, Pearl Beaded"
+  sku: "QS-2026-007"
+  tier: "quick-ship"
+  price: 1700
+  leadTime: "Ships in 3-5 days"
+  materials: "Metallic gold crochet thread, satin lining, pearl beads"
+  heroImage: "/products/potli/gold-pearl-potli/hero.jpg"
+  images:
+    - "/products/potli/gold-pearl-potli/hero.jpg"
+    - "/products/potli/gold-pearl-potli/2.jpg"
+  description: |
+    A gold-thread potli bag crocheted over a satin lining, scattered with
+    pearl beads throughout. Finished with beaded drawstring cords. Festive and
+    bridal-ready, made to be seen.
+  cardBlurb: "Gold-thread potli over satin, scattered pearls."
+  seoTitle: "Handmade Crochet Gold Potli Bag, Pearls | Stitch & Twirl"
+  seoDescription: "Hand-crocheted gold-thread potli bag over satin lining with pearl beads. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: ivory-pearl-potli
+  title: "Ivory Pearl Potli Bag"
+  sku: "QS-2026-004"
+  tier: "quick-ship"
+  price: 1500
+  leadTime: "Ships in 3-5 days"
+  materials: "Cotton crochet thread, pearl beads"
+  heroImage: "/products/potli/ivory-pearl-potli/hero.jpg"
+  images:
+    - "/products/potli/ivory-pearl-potli/hero.jpg"
+    - "/products/potli/ivory-pearl-potli/2.jpg"
+    - "/products/potli/ivory-pearl-potli/3.jpg"
+    - "/products/potli/ivory-pearl-potli/4.jpg"
+  description: |
+    An ivory drawstring potli in a shell-stitch texture, scattered with small
+    pearl beads throughout. Two beaded drawstring cords finish the top.
+    Soft, bridal-ready, ready to carry.
+  cardBlurb: "Ivory shell-stitch potli, scattered pearl beads."
+  seoTitle: "Handmade Crochet Ivory Pearl Potli Bag | Stitch & Twirl"
+  seoDescription: "Hand-crocheted ivory potli bag with pearl beads, shell-stitch texture. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: maroon-tapestry-bucket-bag
+  title: "Maroon Tapestry Sling Bag"
+  sku: "QS-2026-006"
+  tier: "quick-ship"
+  price: 1350
+  leadTime: "Ships in 3-5 days"
+  materials: "Acrylic crochet thread"
+  heroImage: "/products/bag/maroon-tapestry-bucket-bag/hero.jpg"
+  images:
+    - "/products/bag/maroon-tapestry-bucket-bag/hero.jpg"
+    - "/products/bag/maroon-tapestry-bucket-bag/2.jpg"
+  description: |
+    A tapestry-crochet sling bag in maroon, forest green, and cream, worked in
+    a zigzag colourwork pattern with a long shoulder cord and tasselled
+    drawstrings. Compact and sturdy, ready to wear.
+  cardBlurb: "Tapestry-pattern sling bag, maroon and green zigzag."
+  seoTitle: "Handmade Crochet Tapestry Sling Bag | Stitch & Twirl"
+  seoDescription: "Hand-crocheted maroon and green tapestry-pattern sling bag with tasselled drawstrings. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: midnight-shawl
+  title: "Midnight Triangle Shawl"
+  sku: "SIG-2026-002"
+  tier: "signature"
+  price: 1800
+  leadTime: "Ships in 3-5 days"
+  materials: "Acrylic yarn"
+  heroImage: "/products/shawl/midnight-shawl/hero.jpg"
+  images:
+    - "/products/shawl/midnight-shawl/hero.jpg"
+    - "/products/shawl/midnight-shawl/2.jpg"
+    - "/products/shawl/midnight-shawl/3.jpg"
+  description: |
+    A deep midnight-black triangular shawl, hand-crocheted in a simple open
+    stitch with a long knotted fringe along the base. Understated, warm, and
+    easy to throw on over anything. One piece, already made.
+  cardBlurb: "Triangular shawl, open stitch, long knotted fringe."
+  seoTitle: "Handmade Crochet Triangle Shawl — Black | Stitch & Twirl"
+  seoDescription: "Hand-crocheted black triangular shawl with a long fringe. One of one, made in India."
+  careInstructions: "Hand wash cold, lay flat to dry, do not wring or bleach."
+  publishedAt: 2026-09-30
+
+- id: mustard-star-doily
+  title: "Mustard Star Table Mat"
+  sku: "QS-2026-002"
+  tier: "quick-ship"
+  price: 320
+  leadTime: "Ships in 3-5 days"
+  materials: "Cotton yarn"
+  heroImage: "/products/doily/mustard-star-doily/hero.jpg"
+  images:
+    - "/products/doily/mustard-star-doily/hero.jpg"
+    - "/products/doily/mustard-star-doily/2.jpg"
+    - "/products/doily/mustard-star-doily/3.jpg"
+    - "/products/doily/mustard-star-doily/4.jpg"
+  description: |
+    A six-pointed star mat in cream with a mustard border, worked in a dense
+    floral-stitch fill. Ready to use as a table centrepiece or shelf accent.
+  cardBlurb: "Six-point star mat, cream and mustard."
+  seoTitle: "Handmade Crochet Star Table Mat | Stitch & Twirl"
+  seoDescription: "Hand-crocheted star-shaped table mat in cream and mustard cotton yarn. One of one, made in India."
+  careInstructions: "Hand wash cold, lay flat to dry, do not wring or bleach."
+  publishedAt: 2026-09-30
+
+- id: rainbow-bead-bucket-bag
+  title: "Black Bucket Bag, Rainbow Beads"
+  sku: "QS-2026-005"
+  tier: "quick-ship"
+  price: 1100
+  leadTime: "Ships in 3-5 days"
+  materials: "Acrylic crochet thread, wooden beads"
+  heroImage: "/products/bag/rainbow-bead-bucket-bag/hero.jpg"
+  images:
+    - "/products/bag/rainbow-bead-bucket-bag/hero.jpg"
+    - "/products/bag/rainbow-bead-bucket-bag/2.jpg"
+  description: |
+    A black crochet bucket bag with a sturdy top handle and a lining sewn in.
+    The base is trimmed in a ring of multicoloured wooden beads, with a
+    matching amber bead on the drawstring. Everyday-sized, ready to use.
+  cardBlurb: "Black bucket bag, top handle, multicolour bead trim."
+  seoTitle: "Handmade Crochet Bucket Bag — Black with Beads | Stitch & Twirl"
+  seoDescription: "Hand-crocheted black bucket bag with a top handle and multicoloured wooden bead trim. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: silver-beaded-potli
+  title: "Silver Beaded Potli Bag"
+  sku: "QS-2026-003"
+  tier: "quick-ship"
+  price: 1450
+  leadTime: "Ships in 3-5 days"
+  materials: "Metallic crochet thread, metal beads"
+  heroImage: "/products/potli/silver-beaded-potli/hero.jpg"
+  images:
+    - "/products/potli/silver-beaded-potli/hero.jpg"
+    - "/products/potli/silver-beaded-potli/2.jpg"
+    - "/products/potli/silver-beaded-potli/3.jpg"
+    - "/products/potli/silver-beaded-potli/4.jpg"
+  description: |
+    A silver drawstring potli bag, hand-crocheted and threaded through with
+    metal beads over every stitch. Two beaded drawstring cords cinch the top
+    closed. Festive, compact, ready to carry.
+  cardBlurb: "Silver beaded potli, fully studded drawstring bag."
+  seoTitle: "Handmade Crochet Silver Beaded Potli Bag | Stitch & Twirl"
+  seoDescription: "Hand-crocheted silver potli bag studded with metal beads. One of one, made in India."
+  careInstructions: "Spot clean only, avoid water. Store flat."
+  publishedAt: 2026-09-30
+
+- id: sunflower-star-doily
+  title: "Sunflower Table Doily"
+  sku: "QS-2026-001"
+  tier: "quick-ship"
+  price: 350
+  leadTime: "Ships in 3-5 days"
+  materials: "Cotton yarn"
+  heroImage: "/products/doily/sunflower-star-doily/hero.jpg"
+  images:
+    - "/products/doily/sunflower-star-doily/hero.jpg"
+    - "/products/doily/sunflower-star-doily/2.jpg"
+    - "/products/doily/sunflower-star-doily/3.jpg"
+  description: |
+    A layered sunflower-shaped doily in rust, cream, and forest green, with a
+    deep maroon centre. Petals worked in rounds, finished with a scalloped edge.
+    Ready to top a table or shelf.
+  cardBlurb: "Layered sunflower doily, rust and forest green."
+  seoTitle: "Handmade Crochet Sunflower Doily | Stitch & Twirl"
+  seoDescription: "Hand-crocheted sunflower-shaped table doily in rust and green cotton yarn. One of one, made in India."
+  careInstructions: "Hand wash cold, lay flat to dry, do not wring or bleach."
+  publishedAt: 2026-09-30
