@@ -1,5 +1,6 @@
 ---
 import { SHIP_TIME } from "../consts";
+import PaisleyTrim from "./PaisleyTrim.astro";
 
 const items = [
   {
@@ -17,7 +18,8 @@ const items = [
 ];
 ---
 
-<section class="bg-stone border-y border-line">
+<section class="bg-stone">
+  <PaisleyTrim />
   <div
     class="max-w-[1280px] mx-auto px-5 sm:px-20 py-10 sm:py-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16"
   >
@@ -28,4 +30,5 @@ const items = [
       </div>
     ))}
   </div>
+  <PaisleyTrim />
 </section>
