@@ -6,10 +6,10 @@ price: 1650
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Metallic gold crochet thread, satin lining, gold beads"
-heroImage: "/products/gold-bead-potli/hero.jpg"
+heroImage: "/products/potli/gold-bead-potli/hero.jpg"
 images:
-  - "/products/gold-bead-potli/hero.jpg"
-  - "/products/gold-bead-potli/2.jpg"
+  - "/products/potli/gold-bead-potli/hero.jpg"
+  - "/products/potli/gold-bead-potli/2.jpg"
 description: |
   A gold-thread potli bag crocheted over a satin lining, trimmed in a ring of
   gold beads at the base and gold-beaded drawstring tassels. Festive and

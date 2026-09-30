@@ -6,10 +6,11 @@ price: 350
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Cotton yarn"
-heroImage: "/products/sunflower-star-doily/hero.jpg"
+heroImage: "/products/doily/sunflower-star-doily/hero.jpg"
 images:
-  - "/products/sunflower-star-doily/hero.jpg"
-  - "/products/sunflower-star-doily/2.jpg"
+  - "/products/doily/sunflower-star-doily/hero.jpg"
+  - "/products/doily/sunflower-star-doily/2.jpg"
+  - "/products/doily/sunflower-star-doily/3.jpg"
 description: |
   A layered sunflower-shaped doily in rust, cream, and forest green, with a
   deep maroon centre. Petals worked in rounds, finished with a scalloped edge.

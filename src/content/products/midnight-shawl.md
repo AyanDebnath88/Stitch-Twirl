@@ -6,9 +6,11 @@ price: 1800
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Acrylic yarn"
-heroImage: "/products/midnight-shawl/hero.jpg"
+heroImage: "/products/shawl/midnight-shawl/hero.jpg"
 images:
-  - "/products/midnight-shawl/hero.jpg"
+  - "/products/shawl/midnight-shawl/hero.jpg"
+  - "/products/shawl/midnight-shawl/2.jpg"
+  - "/products/shawl/midnight-shawl/3.jpg"
 description: |
   A deep midnight-black triangular shawl, hand-crocheted in a simple open
   stitch with a long knotted fringe along the base. Understated, warm, and

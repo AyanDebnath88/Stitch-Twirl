@@ -6,10 +6,10 @@ price: 180
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Acrylic yarn"
-heroImage: "/products/flower-appliques/hero.jpg"
+heroImage: "/products/accessory/flower-appliques/hero.jpg"
 images:
-  - "/products/flower-appliques/hero.jpg"
-  - "/products/flower-appliques/2.jpg"
+  - "/products/accessory/flower-appliques/hero.jpg"
+  - "/products/accessory/flower-appliques/2.jpg"
 description: |
   Small hand-crocheted flowers — a red bloom with a cream centre and a cream
   bloom with a red centre, plus an ivory rose with leaves. Use as brooches,

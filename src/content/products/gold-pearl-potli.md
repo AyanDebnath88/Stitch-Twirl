@@ -6,10 +6,10 @@ price: 1700
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Metallic gold crochet thread, satin lining, pearl beads"
-heroImage: "/products/gold-pearl-potli/hero.jpg"
+heroImage: "/products/potli/gold-pearl-potli/hero.jpg"
 images:
-  - "/products/gold-pearl-potli/hero.jpg"
-  - "/products/gold-pearl-potli/2.jpg"
+  - "/products/potli/gold-pearl-potli/hero.jpg"
+  - "/products/potli/gold-pearl-potli/2.jpg"
 description: |
   A gold-thread potli bag crocheted over a satin lining, scattered with
   pearl beads throughout. Finished with beaded drawstring cords. Festive and

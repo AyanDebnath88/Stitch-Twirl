@@ -6,10 +6,10 @@ price: 1350
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Acrylic crochet thread"
-heroImage: "/products/maroon-tapestry-bucket-bag/hero.jpg"
+heroImage: "/products/bag/maroon-tapestry-bucket-bag/hero.jpg"
 images:
-  - "/products/maroon-tapestry-bucket-bag/hero.jpg"
-  - "/products/maroon-tapestry-bucket-bag/2.jpg"
+  - "/products/bag/maroon-tapestry-bucket-bag/hero.jpg"
+  - "/products/bag/maroon-tapestry-bucket-bag/2.jpg"
 description: |
   A tapestry-crochet sling bag in maroon, forest green, and cream, worked in
   a zigzag colourwork pattern with a long shoulder cord and tasselled

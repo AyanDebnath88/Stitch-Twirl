@@ -6,10 +6,10 @@ price: 1100
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Acrylic crochet thread, wooden beads"
-heroImage: "/products/rainbow-bead-bucket-bag/hero.jpg"
+heroImage: "/products/bag/rainbow-bead-bucket-bag/hero.jpg"
 images:
-  - "/products/rainbow-bead-bucket-bag/hero.jpg"
-  - "/products/rainbow-bead-bucket-bag/2.jpg"
+  - "/products/bag/rainbow-bead-bucket-bag/hero.jpg"
+  - "/products/bag/rainbow-bead-bucket-bag/2.jpg"
 description: |
   A black crochet bucket bag with a sturdy top handle and a lining sewn in.
   The base is trimmed in a ring of multicoloured wooden beads, with a

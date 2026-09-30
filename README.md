@@ -34,7 +34,7 @@ This is a local-Windows-only quirk — Cloudflare Pages builds on Linux, where
 
 - `src/content/products/*.md` — one file per live product (see `content.config.ts` for the schema)
 - `src/pages/` — Home, Shop, Product detail (`shop/[slug].astro`), About, FAQ (legal disclosures live here)
-- `public/products/<sku-slug>/` — processed product images, referenced by plain URL path in each product's frontmatter
+- `public/products/<category>/<slug>/` — processed product images, grouped by category folder (`potli`, `bag`, `doily`, `scarf`, `shawl`, `accessory`, ...), referenced by plain URL path in each product's frontmatter
 - `scripts/` — Node scripts for Razorpay payment links, Shiprocket orders/labels, and the Google Sheet tracker
 - `apps-script/OrderTracker.gs` — paste into the Google Sheet's Apps Script editor (see comment header in that file)
 - `new-products/` — flat drop folder (git-ignored). Drop any image files loose here, any filenames, no subfolders needed — Claude identifies each by looking at it and sorts them out, same as the first WhatsApp photo batch. `new-products/_published/` is where originals get archived after a product goes live (also flat).
@@ -46,11 +46,11 @@ Run this whenever the user says "process new products" or similar:
 
 1. Read every loose file in `new-products/`, open each one, and identify which product (and which angle — hero/source-faithful/detail/alt) it is by looking at it — filenames carry no information, don't rely on them.
 2. Group the identified images by product. From the photo content itself, determine the product title, category, and tier (`signature` or `quick-ship`) for any product not already in `src/content/products/`.
-3. Run `python scripts/cleanup-photos.py` (crop/orient/autocontrast — local Pillow only, no external service, no API dependency/cost) on the new photos, adding a `JOBS` entry per file.
+3. If the photos are raw phone shots, run `python scripts/cleanup-photos.py` (crop/orient/autocontrast — local Pillow only). If they're AI-generated photoshoot exports from the user's own "Flow" tool, run `python scripts/remove-watermark.py` instead (local OpenCV seamless-clone, strips the fixed-position corner watermark — no external service, no API dependency/cost either way).
 4. Price it: `(yarn cost + fair hourly rate × hours) × 1.4–1.6`, sanity-checked against the pricing benchmark table in the plan (Section 1).
 5. Write SEO title/description.
 6. Generate the SKU: `SIG-YYYY-NNN` or `QS-YYYY-NNN` (sequential — check existing files in `src/content/products/` for the next number).
-7. Save processed images to `public/products/<slug>/`.
+7. Save processed images to `public/products/<category>/<slug>/`.
 8. Run `node scripts/create-payment-link.mjs --amount <price> --title "<title>" --sku <SKU>` once Razorpay is set up, and put the resulting URL in `paymentLinkUrl`.
 9. Create `src/content/products/<slug>.md` with full frontmatter (see `content.config.ts` for every field).
 10. Log the listing: `node scripts/log-to-sheet.mjs --type listing --sku <SKU> --title "<title>" --price <price> --tier <tier>`.

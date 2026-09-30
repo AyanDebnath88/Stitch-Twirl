@@ -6,10 +6,12 @@ price: 1450
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Metallic crochet thread, metal beads"
-heroImage: "/products/silver-beaded-potli/hero.jpg"
+heroImage: "/products/potli/silver-beaded-potli/hero.jpg"
 images:
-  - "/products/silver-beaded-potli/hero.jpg"
-  - "/products/silver-beaded-potli/2.jpg"
+  - "/products/potli/silver-beaded-potli/hero.jpg"
+  - "/products/potli/silver-beaded-potli/2.jpg"
+  - "/products/potli/silver-beaded-potli/3.jpg"
+  - "/products/potli/silver-beaded-potli/4.jpg"
 description: |
   A silver drawstring potli bag, hand-crocheted and threaded through with
   metal beads over every stitch. Two beaded drawstring cords cinch the top

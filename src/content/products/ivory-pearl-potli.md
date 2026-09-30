@@ -6,10 +6,12 @@ price: 1500
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Cotton crochet thread, pearl beads"
-heroImage: "/products/ivory-pearl-potli/hero.jpg"
+heroImage: "/products/potli/ivory-pearl-potli/hero.jpg"
 images:
-  - "/products/ivory-pearl-potli/hero.jpg"
-  - "/products/ivory-pearl-potli/2.jpg"
+  - "/products/potli/ivory-pearl-potli/hero.jpg"
+  - "/products/potli/ivory-pearl-potli/2.jpg"
+  - "/products/potli/ivory-pearl-potli/3.jpg"
+  - "/products/potli/ivory-pearl-potli/4.jpg"
 description: |
   An ivory drawstring potli in a shell-stitch texture, scattered with small
   pearl beads throughout. Two beaded drawstring cords finish the top.

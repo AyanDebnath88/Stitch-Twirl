@@ -6,10 +6,10 @@ price: 2200
 status: "available"
 leadTime: "Ships in 3-5 days"
 materials: "Acrylic yarn"
-heroImage: "/products/floral-granny-scarf/hero.jpg"
+heroImage: "/products/scarf/floral-granny-scarf/hero.jpg"
 images:
-  - "/products/floral-granny-scarf/hero.jpg"
-  - "/products/floral-granny-scarf/2.jpg"
+  - "/products/scarf/floral-granny-scarf/hero.jpg"
+  - "/products/scarf/floral-granny-scarf/2.jpg"
 description: |
   A cream granny-square scarf worked square by square, each one centred with
   a hand-crocheted red flower on green leaves. Finished with a long
