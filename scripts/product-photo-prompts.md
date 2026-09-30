@@ -4,6 +4,14 @@ Feed each block as one prompt, with the matching source photo attached as an
 image reference, into any image-to-image tool ("Flow" or otherwise). Aspect
 ratio `4:5`, end every prompt with the literal line `resolution: 2k`.
 
+Each product now has 4 angle variants:
+- **Angle 1 (Hero)** — styled three-quarter/flat-lay shot, the main listing photo.
+- **Angle 2 (Close to Source)** — deliberately preserves the original phone
+  photo's exact framing/crop/pose, only cleaning background+lighting, to keep
+  one shot organically tied to the real source image.
+- **Angle 3 (Detail)** — macro close-up on a signature texture/detail.
+- **Angle 4 (Alt angle)** — a different natural angle (flat lay, side-lay, etc).
+
 Shared `[AVOID]` block (append to every prompt):
 ```
 no AI artifacts, no warped or smeared text, no fake words baked into the image,
@@ -67,6 +75,49 @@ Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
 resolution: 2k
 ```
 
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, product position, and natural fold/drape — do not
+recompose. Only clean up the background and lighting: replace the original
+backdrop with the same warm neutral linen surface and soft daylight described
+above. The result must read as the same photograph, naturally cleaned up —
+not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on one granny-square flower motif and its neighbouring
+fringe corner, filling most of the frame. Same lighting quality, palette, and
+surface staging as the hero shot above. Very shallow depth of field (f/2.8),
+background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but shot
+fully top-down (flat lay), scarf unfolded completely flat to show the whole
+square grid pattern edge to edge.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
 ---
 
 ## 2. Midnight Triangle Shawl
@@ -106,6 +157,49 @@ Warm oat/cream brand palette, quiet handmade mood.
 
 [QUALITY MARKERS]
 Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, product position, and natural fold/drape — do not
+recompose. Only clean up the background and lighting: replace the original
+backdrop with the same warm neutral cream surface and soft daylight described
+above. The result must read as the same photograph, naturally cleaned up —
+not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the fringe knot line where the shawl body meets the
+fringe, filling most of the frame. Same lighting quality, palette, and surface
+staging as the hero shot above. Very shallow depth of field (f/2.8),
+background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but shot
+fully top-down (flat lay), shawl opened into its full triangle shape, entire
+piece visible edge to edge.
 
 [AVOID]
 (shared block above)
@@ -158,6 +252,48 @@ Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
 resolution: 2k
 ```
 
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the layered centre rings — maroon, cream, and the
+green accent-dot border — filling most of the frame. Same lighting quality,
+palette, and surface staging as the hero shot above. Very shallow depth of
+field (f/2.8), background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but
+camera lowered to a gentle 30° angle, doily resting beside a small stack of
+folded linen napkins for a lived-in tablescape feel rather than pure flat lay.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
 ---
 
 ## 4. Mustard Star Table Mat
@@ -194,6 +330,48 @@ Warm oat/cream brand palette, cozy handmade mood.
 
 [QUALITY MARKERS]
 Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on one star point showing the mustard-gold border stitch
+against the cream body, filling most of the frame. Same lighting quality,
+palette, and surface staging as the hero shot above. Very shallow depth of
+field (f/2.8), background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+mat draped so one point gently overhangs the edge of the wood surface, a more
+natural in-use moment rather than a perfectly flat lay.
 
 [AVOID]
 (shared block above)
@@ -247,6 +425,47 @@ Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
 resolution: 2k
 ```
 
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the beaded drawstring tassel end, filling most of the
+frame. Same lighting quality, palette, and surface staging as the hero shot
+above. Very shallow depth of field (f/2.8), background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid on its side with the mouth slightly open and a natural slouch, rather
+than standing upright.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
 ---
 
 ## 6. Ivory Pearl Potli Bag
@@ -284,6 +503,48 @@ Warm oat/cream brand palette, soft romantic handmade mood.
 
 [QUALITY MARKERS]
 Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the shell-stitch texture with two or three pearls set
+into it, filling most of the frame. Same lighting quality, palette, and
+surface staging as the hero shot above. Very shallow depth of field (f/2.8),
+background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid on its side with a natural slouch, drawstrings loosely coiled beside
+it rather than standing upright.
 
 [AVOID]
 (shared block above)
@@ -338,6 +599,48 @@ Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
 resolution: 2k
 ```
 
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the ring of multicoloured wooden beads at the base,
+filling most of the frame, natural wood-grain visible. Same lighting quality,
+palette, and surface staging as the hero shot above. Very shallow depth of
+field (f/2.8), background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid on its side with the top handle draped naturally over the body,
+rather than standing upright.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
 ---
 
 ## 8. Maroon Tapestry Sling Bag
@@ -376,6 +679,48 @@ Warm oat/cream brand palette, festive handmade mood.
 
 [QUALITY MARKERS]
 Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft daylight described above. The result must read as
+the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the zigzag colourwork pattern on the front panel,
+filling most of the frame. Same lighting quality, palette, and surface staging
+as the hero shot above. Very shallow depth of field (f/2.8), background
+softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid flat showing the full front panel pattern square-on, shoulder cord
+coiled naturally beside it.
 
 [AVOID]
 (shared block above)
@@ -428,6 +773,48 @@ Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
 resolution: 2k
 ```
 
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft directional light described above. The result must
+read as the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the pearls set into the gold mesh over the satin
+lining, filling most of the frame. Same lighting quality, palette, and surface
+staging as the hero shot above. Very shallow depth of field (f/2.8),
+background softly out of focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid on its side with a natural slouch, satin sheen catching the light
+along the fold.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
 ---
 
 ## 10. Gold Thread Potli, All-Gold Beaded
@@ -467,6 +854,48 @@ Warm oat/cream brand palette, festive handmade mood.
 
 [QUALITY MARKERS]
 Tack-sharp, hyper-detailed, photorealistic, commercial-grade.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 2 — Close to Source (preserve original framing)
+```
+[SOURCE-FAITHFUL VARIANT]
+Use the original source photo as the primary reference. PRESERVE its exact
+camera angle, crop, and product position — do not recompose. Only clean up the
+background and lighting: replace the original backdrop with the same warm
+neutral surface and soft directional light described above. The result must
+read as the same photograph, naturally cleaned up — not a new composition.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 3 — Detail Close-up
+```
+[DETAIL SHOT]
+Tight macro close-up on the gold bead trim ring at the base, filling most of
+the frame. Same lighting quality, palette, and surface staging as the hero
+shot above. Very shallow depth of field (f/2.8), background softly out of
+focus.
+
+[AVOID]
+(shared block above)
+
+resolution: 2k
+```
+
+### Angle 4 — Alternate Angle
+```
+[ALT ANGLE]
+Same surface, lighting, palette, and styling as the hero shot above, but the
+bag laid on its side with a natural slouch, gold-beaded tassels coiled beside
+it.
 
 [AVOID]
 (shared block above)
