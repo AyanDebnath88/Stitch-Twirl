@@ -46,7 +46,7 @@ Run this whenever the user says "process new products" or similar:
 
 1. Read the raw photo(s) from `new-products/<some-folder>/`.
 2. From the photo content itself (not the filename), determine the product title, category, and tier (`signature` or `quick-ship`).
-3. Do light, conservative photo cleanup (background/exposure only) using the available image-editing tool.
+3. Run `python scripts/cleanup-photos.py` (crop/orient/autocontrast — local Pillow only, no external service, no API dependency/cost) on the new photos, adding a `JOBS` entry per file.
 4. Price it: `(yarn cost + fair hourly rate × hours) × 1.4–1.6`, sanity-checked against the pricing benchmark table in the plan (Section 1).
 5. Write SEO title/description.
 6. Generate the SKU: `SIG-YYYY-NNN` or `QS-YYYY-NNN` (sequential — check existing files in `src/content/products/` for the next number).

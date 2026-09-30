@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# Claude Code session lock, not project content
+.claude/scheduled_tasks.lock
+
 # pipeline working folders — raw photo drops and draft social packets,
 # not site code, shouldn't be committed
 /new-products/*
