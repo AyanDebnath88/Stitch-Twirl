@@ -52,12 +52,18 @@ flattening of texture, no plastic sheen.
 
 [COLOR PALETTE]
 Keep the product's own true colors exactly as in the reference image, set
-against a warm neutral linen or wood surface.
+against a warm neutral surface.
+
+[SURFACE / BACKDROP]
+Pick ONE warm neutral surface for this shot — linen fabric, raw wood grain,
+natural unpolished stone, woven jute, or a soft matte ceramic tabletop. Vary
+the choice across a set of images; do not default to the same backdrop every
+time.
 
 [STYLE REFERENCE]
-Warm hand-crafted lifestyle styling, natural linen and raw-wood surface
-staging, soft natural daylight, unforced organic composition, artisan
-small-batch product photography register.
+Warm hand-crafted lifestyle styling, natural varied surface staging, soft
+natural daylight, unforced organic composition, artisan small-batch product
+photography register.
 
 [BRAND INTEGRATION]
 Warm oat/cream brand palette, cozy handmade mood, boutique small-batch feel.
@@ -91,8 +97,10 @@ resolution: 2k
 Use the attached reference photo as the primary source. PRESERVE its exact
 camera angle, crop, product position, and natural fold/drape — do not
 recompose and do not change the product itself. Only clean up the background
-and lighting: replace the original backdrop with a warm neutral linen or wood
-surface, and apply soft window-diffused daylight, 4000–4500K warm-neutral.
+and lighting: replace the original backdrop with a warm neutral surface of
+your choice (linen, raw wood, stone, jute — pick one different from the other
+angles in this set, don't reuse the same backdrop across every shot), and
+apply soft window-diffused daylight, 4000–4500K warm-neutral.
 The result must read as the same photograph, naturally cleaned up — not a new
 shot, not a new composition.
 
@@ -117,10 +125,10 @@ Tight macro close-up on the single most distinctive texture or construction
 detail of the product shown in the reference image (e.g. its central motif,
 beadwork, fringe knot, or stitch pattern — pick whichever feature is most
 visually distinctive in that image). Fill most of the frame with it. Same
-lighting quality, palette, and surface staging as a warm hand-crafted
-etsy-style product shot: soft window-diffused daylight, warm neutral linen or
-wood surface. Very shallow depth of field (f/2.8), background softly out of
-focus.
+lighting quality and palette as a warm hand-crafted etsy-style product shot:
+soft window-diffused daylight, a warm neutral surface (linen, wood, stone, or
+jute — pick one different from the other angles in this set). Very shallow
+depth of field (f/2.8), background softly out of focus.
 
 [AVOID]
 no AI artifacts, no plastic look, no waxy surface, no oversaturated HDR,
@@ -137,9 +145,10 @@ resolution: 2k
 
 ```
 [ALT ANGLE]
-Same product (from the reference image), same warm neutral linen/wood
-surface, same soft window-diffused daylight and palette as a hero shot — but
-from a different natural angle than a straight three-quarter view: either a
+Same product (from the reference image), same soft window-diffused daylight
+and palette as a hero shot, on a warm neutral surface (linen, wood, stone, or
+jute — pick one different from the other angles in this set) — but from a
+different natural angle than a straight three-quarter view: either a
 full top-down flat lay showing the entire piece edge to edge, or the product
 laid on its side with a natural slouch/drape if it's a bag. Choose whichever
 alternate angle best suits this product's shape. Do not change the product
