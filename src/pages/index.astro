@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProductCard from "../components/ProductCard.astro";
+import StitchDivider from "../components/StitchDivider.astro";
 import { getCollection } from "astro:content";
 import { SITE } from "../consts";
 
@@ -37,6 +38,10 @@ const featured = allProducts.filter((p) => p.data.status === "available").slice(
       </a>
     </div>
   </section>
+
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    <StitchDivider class="mb-16" />
+  </div>
 
   <section class="mx-auto max-w-5xl px-4 sm:px-6 pb-20">
     <div class="flex items-baseline justify-between mb-6">

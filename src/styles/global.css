@@ -3,6 +3,7 @@
 @theme {
   --font-display: "Fraunces", "Georgia", serif;
   --font-body: "Work Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
   --color-cream: #faf5ec;
   --color-cream-dark: #f1e8d8;
@@ -28,4 +29,13 @@ h3,
 h4,
 .font-display {
   font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: white;
 }

@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { product } = Astro.props;
-const { title, price, heroImage, tier, status, leadTime } = product.data;
+const { title, sku, price, heroImage, tier, status, leadTime } = product.data;
 ---
 
 <a
@@ -36,6 +36,7 @@ const { title, price, heroImage, tier, status, leadTime } = product.data;
   </div>
   <div class="p-4">
     <h3 class="font-display text-lg text-ink">{title}</h3>
+    <p class="font-mono text-[11px] tracking-wide text-ink-soft/60 mt-0.5">{sku}</p>
     <p class="text-ink-soft text-sm mt-1">{leadTime}</p>
     <p class="text-terracotta font-medium mt-2">₹{price.toLocaleString("en-IN")}</p>
   </div>

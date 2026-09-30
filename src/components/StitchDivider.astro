@@ -1,0 +1,24 @@
+---
+// A hand-drawn running-stitch line — a small, literal nod to the craft
+// instead of a generic <hr> or gradient divider.
+interface Props {
+  class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<svg
+  class:list={["w-full h-4 text-line", className]}
+  viewBox="0 0 400 16"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+>
+  <path
+    d="M0,8 Q10,2 20,8 T40,8 T60,8 T80,8 T100,8 T120,8 T140,8 T160,8 T180,8 T200,8 T220,8 T240,8 T260,8 T280,8 T300,8 T320,8 T340,8 T360,8 T380,8 T400,8"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-dasharray="6 5"
+    stroke-linecap="round"
+  />
+</svg>

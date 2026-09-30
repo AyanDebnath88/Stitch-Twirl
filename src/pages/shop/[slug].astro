@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { product } = Astro.props;
-const { title, price, tier, status, leadTime, materials, images, heroImage, sizeGuide, careInstructions, paymentLinkUrl, whatsappMessage } =
+const { title, sku, price, tier, status, leadTime, materials, images, heroImage, sizeGuide, careInstructions, paymentLinkUrl, whatsappMessage } =
   product.data;
 const { Content } = await render(product);
 
@@ -39,7 +39,10 @@ const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}"
       >
         {tier === "signature" ? "Signature" : "Quick-Ship"}
       </span>
-      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-2">{title}</h1>
+      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-1">{title}</h1>
+      <p class="font-mono text-xs tracking-wide text-ink-soft/70 mb-3">
+        {sku} · one of one
+      </p>
       <p class="text-2xl text-terracotta font-medium mb-1">₹{price.toLocaleString("en-IN")}</p>
       {leadTime && <p class="text-ink-soft text-sm mb-6">{leadTime}</p>}
 
