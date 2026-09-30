@@ -25,7 +25,9 @@ const quickShip = allProducts.filter((p) => p.data.tier === "quick-ship");
       </p>
       {signature.length > 0 ? (
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-          {signature.map((product) => <ProductCard product={product} />)}
+          {signature.map((product) => (
+            <ProductCard product={product} index={allProducts.indexOf(product) + 1} />
+          ))}
         </div>
       ) : (
         <p class="text-ink-soft text-sm">No signature pieces live right now — check back soon.</p>
@@ -39,7 +41,9 @@ const quickShip = allProducts.filter((p) => p.data.tier === "quick-ship");
       </p>
       {quickShip.length > 0 ? (
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-          {quickShip.map((product) => <ProductCard product={product} />)}
+          {quickShip.map((product) => (
+            <ProductCard product={product} index={allProducts.indexOf(product) + 1} />
+          ))}
         </div>
       ) : (
         <p class="text-ink-soft text-sm">No quick-ship pieces live right now — check back soon.</p>

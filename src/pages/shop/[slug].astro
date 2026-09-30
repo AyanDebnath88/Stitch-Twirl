@@ -25,25 +25,17 @@ const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}"
     <div>
       <div class="grid grid-cols-1 gap-3">
         {gallery.map((src) => (
-          <img src={src} alt={title} class="w-full rounded-2xl border border-line object-cover" />
+          <img src={src} alt={title} class="w-full rounded-3xl object-cover" />
         ))}
       </div>
     </div>
 
     <div>
-      <span
-        class:list={[
-          "inline-block text-xs px-2.5 py-1 rounded-full font-medium mb-3",
-          tier === "signature" ? "bg-terracotta text-white" : "bg-sage text-white",
-        ]}
-      >
-        {tier === "signature" ? "Signature" : "Quick-Ship"}
-      </span>
-      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-1">{title}</h1>
-      <p class="font-mono text-xs tracking-wide text-ink-soft/70 mb-3">
-        {sku} · one of one
+      <p class="font-mono text-xs tracking-[0.08em] text-terracotta-dark mb-3">
+        {sku} &mdash; {tier === "signature" ? "Signature" : "Quick-Ship"} &middot; one of one
       </p>
-      <p class="text-2xl text-terracotta font-medium mb-1">₹{price.toLocaleString("en-IN")}</p>
+      <h1 class="font-display text-3xl sm:text-4xl text-ink mb-2">{title}</h1>
+      <p class="text-2xl text-ink font-medium mb-1">₹{price.toLocaleString("en-IN")}</p>
       {leadTime && <p class="text-ink-soft text-sm mb-6">{leadTime}</p>}
 
       {status === "available" ? (
@@ -51,7 +43,7 @@ const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}"
           {paymentLinkUrl ? (
             <a
               href={paymentLinkUrl}
-              class="flex-1 text-center rounded-full bg-terracotta text-white px-6 py-3 text-sm font-medium hover:bg-terracotta-dark transition-colors"
+              class="flex-1 text-center rounded-full bg-ink text-cream px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
             >
               Buy Now
             </a>
@@ -62,7 +54,7 @@ const waLink = whatsappLink(whatsappMessage ?? `Hi! I'd like to order "${title}"
           )}
           <a
             href={waLink}
-            class="flex-1 text-center rounded-full border border-sage text-sage-dark px-6 py-3 text-sm font-medium hover:bg-sage hover:text-white transition-colors"
+            class="flex-1 text-center rounded-full border border-sage-dark text-sage-dark px-6 py-3 text-sm font-medium hover:bg-ink hover:text-cream hover:border-ink transition-colors"
           >
             Order on WhatsApp
           </a>

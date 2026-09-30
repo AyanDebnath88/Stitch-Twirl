@@ -2,19 +2,22 @@
 
 @theme {
   --font-display: "Fraunces", "Georgia", serif;
-  --font-body: "Work Sans", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
-  --color-cream: #faf5ec;
-  --color-cream-dark: #f1e8d8;
-  --color-ink: #2b241d;
-  --color-ink-soft: #574d40;
-  --color-terracotta: #b5563a;
-  --color-terracotta-dark: #96432c;
-  --color-sage: #7c8b6f;
-  --color-sage-dark: #626f52;
-  --color-gold: #cf9a44;
-  --color-line: #e5d9c4;
+  /* soft cottagecore palette, disciplined to one dominant accent (rose) +
+     one sparingly-used secondary (butter) — gallery restraint, not a
+     rainbow of craft-fair colors */
+  --color-cream: #fbf4ee;
+  --color-cream-dark: #f3e6dd;
+  --color-ink: #2e2724;
+  --color-ink-soft: #6b5f58;
+  --color-terracotta: #c98a82;
+  --color-terracotta-dark: #b06f67;
+  --color-sage: #92a587;
+  --color-sage-dark: #778c6c;
+  --color-gold: #e3c27e;
+  --color-line: #ead9ce;
 }
 
 body {

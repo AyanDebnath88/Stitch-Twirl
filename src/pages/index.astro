@@ -26,13 +26,13 @@ const featured = allProducts.filter((p) => p.data.status === "available").slice(
     <div class="mt-8 flex items-center justify-center gap-4">
       <a
         href="/shop"
-        class="rounded-full bg-terracotta text-white px-6 py-3 text-sm font-medium hover:bg-terracotta-dark transition-colors"
+        class="rounded-full bg-ink text-cream px-6 py-3 text-sm font-medium hover:opacity-90 transition-opacity"
       >
         Shop the collection
       </a>
       <a
         href="/about"
-        class="rounded-full border border-ink/20 text-ink px-6 py-3 text-sm font-medium hover:border-terracotta hover:text-terracotta transition-colors"
+        class="rounded-full border border-ink/20 text-ink px-6 py-3 text-sm font-medium hover:border-terracotta-dark hover:text-terracotta-dark transition-colors"
       >
         Our story
       </a>
@@ -50,7 +50,7 @@ const featured = allProducts.filter((p) => p.data.status === "available").slice(
     </div>
     {featured.length > 0 ? (
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-        {featured.map((product) => <ProductCard product={product} />)}
+        {featured.map((product, i) => <ProductCard product={product} index={i + 1} />)}
       </div>
     ) : (
       <p class="text-ink-soft">
