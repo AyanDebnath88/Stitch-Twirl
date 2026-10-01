@@ -8,7 +8,7 @@ export const SITE = {
   tagline: "Handmade crochet, one piece at a time",
   description:
     "Hand-crocheted blankets, bags, and small pieces made to order in small batches — no factories, no rush.",
-  domain: "https://PLACEHOLDER-DOMAIN.in",
+  domain: "https://yarnkatha.com",
 };
 
 export const SHIP_TIME = "3-5 days";
@@ -16,9 +16,9 @@ export const SHIP_TIME = "3-5 days";
 export const CONTACT = {
   legalName: "PLACEHOLDER LEGAL NAME (e.g. Jane Doe, proprietor)",
   address: "PLACEHOLDER ADDRESS, City, State, PIN",
-  email: "hello@PLACEHOLDER-DOMAIN.in",
+  email: "hello@yarnkatha.com", // TODO: set up Cloudflare Email Routing (free) to receive mail here
   whatsappNumber: "91PLACEHOLDER10DIGIT", // country code + number, no + or spaces, for wa.me links
-  grievanceContact: "PLACEHOLDER NAME — hello@PLACEHOLDER-DOMAIN.in",
+  grievanceContact: "PLACEHOLDER NAME — hello@yarnkatha.com",
   instagramHandle: "PLACEHOLDER_INSTAGRAM_HANDLE",
 };
 
