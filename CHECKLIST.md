@@ -19,7 +19,7 @@ Status as of 2026-10-01.
 ## Your queue (needs an account only you can create)
 
 - [x] Buy domain — yarnkatha.com purchased
-- [ ] Rename GitHub repo `AyanDebnath88/Stitch-Twirl` → `Yarnkatha` (Settings → repository name on github.com — I have no `gh` CLI/API token here, can't do this myself). GitHub auto-redirects the old URL, so nothing breaks; tell me once it's done and I'll update the local `git remote` to match.
+- [x] GitHub repo renamed → `AyanDebnath88/Yarnkatha` (local `git remote` updated to match)
 - [ ] Cloudflare Pages — connect the GitHub repo, build cmd `npm run build`, output `dist`, then point yarnkatha.com's DNS at it (Cloudflare gives you the records once the project's created)
 - [ ] Cloudflare Email Routing (free) — set up `hello@yarnkatha.com` forwarding to your real inbox, needed since `consts.ts` now points there
 - [ ] Razorpay — signup + KYC, paste API key into `.env` (unblocks `scripts/create-payment-link.mjs`, Buy Now button, item 12/13 on AUDIT.md)
