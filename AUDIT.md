@@ -14,7 +14,7 @@ Legend: ✅ done · 🟡 partial · ⛔ blocked (needs an account/service the us
 4. Mobile checkout — ⛔ blocked. No Razorpay account yet — "Buy Now" shows "Payment link coming soon."
 
 ## SEO
-5. Crawl for SEO issues — 🟡 partial. Every product has `seoTitle`/`seoDescription`. No `sitemap.xml`, no `robots.txt`, no canonical tags, no `site` set in `astro.config.mjs`.
+5. Crawl for SEO issues — 🟡 partial. `seoTitle`/`seoDescription` per product, `site` set in `astro.config.mjs` (yarnkatha.com), `sitemap-index.xml` + `robots.txt` live. Still no canonical tags.
 6. Organic search health — N/A — site isn't live on a domain yet, no search traffic to review.
 
 ## Product Pages
@@ -41,8 +41,8 @@ Legend: ✅ done · 🟡 partial · ⛔ blocked (needs an account/service the us
 15. Conversion data — N/A until analytics exists.
 
 ## Security
-16. Website security — 🟡 partial. `.env` git-ignored, no secrets in repo, no CMS/plugin attack surface (static Astro). `npm audit` not yet run.
-17. Forms/customer data handling — N/A mostly — no data-collection forms live yet (no newsletter capture built); WhatsApp link only.
+16. Website security — 🟡 partial. `.env` git-ignored, no secrets in repo, no CMS/plugin attack surface (static Astro, no DB). `npm audit` run 2026-10-01 — 0 vulnerabilities.
+17. Forms/customer data handling — 🟡 partial. Site itself stores nothing (no DB, static host) — checkout/payment data goes to Razorpay, shipping data to Shiprocket, order records to the user's own Google Sheet. **Gap: no Privacy Policy page yet disclosing this third-party data flow** — needed before go-live, flagged in CHECKLIST.md.
 
 ## Accessibility
 18. Basic accessibility — ⬜ not audited. Images have `alt={title}`; contrast/keyboard-nav/focus states not checked.
@@ -63,7 +63,8 @@ Legend: ✅ done · 🟡 partial · ⛔ blocked (needs an account/service the us
 ---
 
 ## Next concrete actions (highest-leverage first)
-- Set `site` in `astro.config.mjs` + add `@astrojs/sitemap` + `public/robots.txt` (cheap, unblocked, do anytime).
+- Write a Privacy Policy page (item 17 gap) — discloses Razorpay/Shiprocket/Google Sheet as data processors.
 - Decide if category filter UI on `/shop` is worth it now or later (catalog is 11 items — borderline).
-- Run `npm audit` once.
-- Everything else gated on: Razorpay KYC, domain purchase, Shiprocket signup (all user-side, tracked in README).
+- Everything else gated on: Razorpay KYC, Shiprocket signup, Cloudflare Pages connect (all user-side, tracked in CHECKLIST.md).
+
+Done this pass: `site` wired, sitemap + robots.txt live, `npm audit` clean, real domain (yarnkatha.com) in `consts.ts`.

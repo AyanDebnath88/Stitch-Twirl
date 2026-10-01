@@ -6,8 +6,9 @@ Status as of 2026-10-01.
 
 ## Claude's queue (no account needed, can build now)
 
-- [ ] `sitemap.xml` + `robots.txt` + `site` in `astro.config.mjs`
-- [ ] `npm audit`, fix flagged deps
+- [x] `sitemap.xml` + `robots.txt` + `site` in `astro.config.mjs` — done, domain is yarnkatha.com
+- [x] `npm audit` — done, 0 vulnerabilities
+- [ ] Write a Privacy Policy page — discloses Razorpay (payment data), Shiprocket (shipping data), Google Sheet (order records) as the three places customer data actually goes. Site itself has no DB and stores nothing.
 - [ ] Basic accessibility pass — alt text, contrast, focus states, keyboard nav
 - [ ] Lighthouse/page-speed pass on home, shop, product, checkout-stub
 - [ ] Decide w/ you: category filter UI on `/shop` (potli/bag/doily/scarf/shawl) — have 11 products, borderline worth it yet
@@ -17,8 +18,9 @@ Status as of 2026-10-01.
 
 ## Your queue (needs an account only you can create)
 
-- [ ] Buy domain, point to Cloudflare Pages
-- [ ] Cloudflare Pages — connect GitHub repo (`AyanDebnath88/Stitch-Twirl`), build cmd `npm run build`, output `dist`
+- [x] Buy domain — yarnkatha.com purchased
+- [ ] Cloudflare Pages — connect GitHub repo (`AyanDebnath88/Stitch-Twirl`), build cmd `npm run build`, output `dist`, then point yarnkatha.com's DNS at it (Cloudflare gives you the records once the project's created)
+- [ ] Cloudflare Email Routing (free) — set up `hello@yarnkatha.com` forwarding to your real inbox, needed since `consts.ts` now points there
 - [ ] Razorpay — signup + KYC, paste API key into `.env` (unblocks `scripts/create-payment-link.mjs`, Buy Now button, item 12/13 on AUDIT.md)
 - [ ] Shiprocket — signup (Lite plan), add pickup address, name into `.env` (unblocks `scripts/shiprocket.mjs`)
 - [ ] Google Sheet — create w/ Orders + Listings tabs, paste `apps-script/OrderTracker.gs`, deploy as Web App, URL into `.env` (unblocks `scripts/log-to-sheet.mjs`)
