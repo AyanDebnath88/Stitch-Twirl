@@ -1,5 +1,5 @@
 /**
- * Stitch & Twirl — lightweight order/listing tracker.
+ * Yarnkatha — lightweight order/listing tracker.
  *
  * SETUP (one-time, ~5 minutes):
  * 1. Create a new Google Sheet. Add two tabs named exactly: "Orders" and "Listings".

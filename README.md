@@ -1,4 +1,4 @@
-# Stitch & Twirl
+# Yarnkatha
 
 Handmade crochet boutique — Astro site, Razorpay checkout, Shiprocket fulfillment.
 See the full business plan at `C:\Users\ajitd\.claude\plans\ultra-hi-so-my-peaceful-adleman.md`

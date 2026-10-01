@@ -4,7 +4,7 @@
 // as well as contact links across the site.
 
 export const SITE = {
-  name: "Stitch & Twirl",
+  name: "Yarnkatha",
   tagline: "Handmade crochet, one piece at a time",
   description:
     "Hand-crocheted blankets, bags, and small pieces made to order in small batches — no factories, no rush.",

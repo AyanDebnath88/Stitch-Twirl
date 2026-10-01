@@ -1,5 +1,6 @@
 ---
 import Logomark from "./Logomark.astro";
+import PaisleyTrim from "./PaisleyTrim.astro";
 import { SITE, CONTACT, whatsappLink } from "../consts";
 
 const currentYear = new Date().getFullYear();
@@ -52,8 +53,9 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 
+  <PaisleyTrim color="rgba(242, 237, 230, 0.3)" />
   <div
-    class="border-t border-oat/15 px-5 sm:px-20 py-5 flex flex-col sm:flex-row gap-1 sm:gap-4 text-[12px] text-oat/50"
+    class="px-5 sm:px-20 py-5 flex flex-col sm:flex-row gap-1 sm:gap-4 text-[12px] text-oat/50"
   >
     <span>&copy; {currentYear} {SITE.name}. Handmade in India.</span>
     <span>Every piece is one of one.</span>

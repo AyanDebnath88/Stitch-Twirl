@@ -39,7 +39,7 @@ const auth = Buffer.from(
 const payload = {
   amount: Math.round(Number(amount) * 100), // paise
   currency: "INR",
-  description: `${title} (${sku}) — Stitch & Twirl`,
+  description: `${title} (${sku}) — Yarnkatha`,
   reference_id: sku,
   notify: { sms: Boolean(phone), email: false },
   reminder_enable: true,
